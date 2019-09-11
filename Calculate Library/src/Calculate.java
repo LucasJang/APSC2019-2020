@@ -4,6 +4,7 @@
 // Group of methods that perform math calculations aka library
 
 public class Calculate {
+// PART 1
 	public static int square(int number) { // a call to square returns the square of the value passed, accepts and returns integer
 		int answer = 0;
 		answer = number * number;
@@ -16,17 +17,22 @@ public class Calculate {
 	}
 	public static double average(double number1, double number2) { // a call to average returns the average of the two values passed, accepts two doubles and returns a double
 		double answer = 0;
-		answer = (number1 * number2)/2;
+		answer = (number1 + number2)/2.0;
 		return answer;
 	}
 	public static double average(double number1, double number2, double number3) { // a call to average returns the average of the three values passed, accepts three doubles and returns a double
 		double answer = 0;
-		answer = (number1 * number2 * number3)/3;
+		answer = (number1 + number2 + number3)/3.0;
 		return answer;
 	}
 	public static double toDegrees(double number) { // a call to toDegrees returns the conversion to degrees from radians passed, accepts and returns a double
 		double answer = 0;
 		answer = number * (180/3.14159);
+		return answer;
+	}
+	public static double toRadians(double number ) { // a call to toRadians return the conversion to radians from degrees passed, accepts a double and returns a double
+		double answer = 0;
+		answer = number * (3.14159/180);
 		return answer;
 	}
 	public static double discriminant(double a, double b, double c) { // a call to discriminant returns the discriminant of the three coefficients of a quadratic passed, accepts three doubles and returns one double
@@ -36,11 +42,34 @@ public class Calculate {
 	}
 	public static String toImproperFrac(int a, int b, int c) { // a call to toImproperFrac returns an improper fraction converted from a mixed number, accepts three integers and returns a string
 		String answer = "0";
-		answer = "(a * c)+b \" c";
-		return(answer);
+		answer = (a * c) + b + "/" + c;
+		return answer;
 	}
-	public static String toMixedNum(int a, int b) {
-		String = answer;
-		answer = "(a/b)_("
+	public static String toMixedNum(int a, int b) { // a call to toMixedNum returns a mixed number converted from an improper fraction, accepts two integers and returns a string
+		String answer ="0";
+		answer = (a/b) + "_" + (a%b) + "/" + 2;
+		return answer;
+	}
+	public static String foil(int a, int b, int c, int d, String e) { // a call to foil returns a quadratic equation from a binomial, accepts four integers and one string and returns a string
+		String answer = "0";
+		answer = a*c + e + "^2" + " + " + (a*d + b*c) + e + " + " + (b*d);
+		return answer;
+	}
+// PART 2
+	public static boolean isDivisbleBy(int a, int b) { // a call to isDivisibleBy determines whether or not one integer is divisible by another, accepts two integers and returns a boolean
+		boolean answer = true;
+		answer = (a%b) == 0;
+		return answer;
+	}
+	public static double absValue(double number) { // a call to absVal returns the absolute value of the number passed, accepts and returns and double
+		double answer = 0;
+		answer = number*((2*number+1)%2);
+		return answer;
+	}
+	public static double max(double a, double b) { // a call to max returns the larger of the two passed, accepts two doubles and returns a double
+		double answer = 0;
+		answer = a 
+		
+		
 	}
 }
