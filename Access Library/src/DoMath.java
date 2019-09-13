@@ -19,6 +19,12 @@ public class DoMath {
 		System.out.println(Calculate.foil(2,3,6,-7,"n"));
 		System.out.println(Calculate.isDivisbleBy(4,3));
 		System.out.println(Calculate.absValue(-10));
+		System.out.println(Calculate.max(3,7));
+		System.out.println(Calculate.max(1234,5,45));
+		System.out.println(Calculate.min(4,23456543));
+		System.out.println(Calculate.round2(454.23434));
+		System.out.println(Calculate.exponent(2,6));
+		System.out.println(Calculate.factorial(9));
 	}
 
 }

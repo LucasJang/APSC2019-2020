@@ -66,10 +66,76 @@ public class Calculate {
 		answer = number*((2*number+1)%2);
 		return answer;
 	}
+	// public static double absValue(double number) { // a call to absVal returns the absolute value of the number passed, accepts and returns and double
+	// 		double answer = 0;
+	//		if(number < 0) {
+	//      	answer = number * -1;
+	//      } else {
+	//			answer = number;
+	//		}
+	//		return answer;
+	// }
 	public static double max(double a, double b) { // a call to max returns the larger of the two passed, accepts two doubles and returns a double
 		double answer = 0;
-		answer = a 
-		
-		
+		if(a>b) {
+			answer = a;
+		} else {
+			answer = b;
+		}
+		return answer;
+	}
+	public static double max(double a, double b, double c) { // a call to max returns the larger of the three passed, accepts three doubles and returns a double
+		double answer = 0;
+		if(a>b) {
+			answer = a;
+		} else {
+			answer = b;
+		}
+		if(c>answer) {
+			answer = c;
+		}
+		return answer;
+	}
+	public static double min(int a, int b) { // a call to min returns the samller of the two passed, accepts two integers and returns an integer
+		if(a<b) { 
+			return a;
+		} else {
+			return b;
+		}
+	}
+	public static double round2(double a) { // a call to round2 returns the number correctly rounded to two decimal places, accepts and returns a double
+		a = a * 100;
+		a = (int)a;
+		a = (double)a/100;
+		return(a);
+	}
+// PART 3
+	public static double exponent(double a, int b) { // a call to exponent returns the first number to the second number's power, accepts a double and an integer and returns a double
+		int i = 1;
+		double multiplier = a;
+		while(i != b) {
+			a = a * multiplier;
+			i++;
+		}
+		return a;
+	}
+	public static int factorial(int a) { // a call to factorial returns the factorial of the value passed, accepts and returns an integer
+		int i = 1;
+		int n = 1;
+		while(i != a) {
+			i++;
+			n = i * n;
+		}
+		return n;
+	}
+	public static isPrime(int a) { // a call to isPrime determines whether or not the number passed is prime, accepts an integer and returns a boolean
+		int i = 2;
+		if(Calculate.isDivisbleBy(a,i)==false) {
+			i++;	
+		} else {
+			return false;
+		}
 	}
 }
+
+
