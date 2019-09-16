@@ -56,7 +56,7 @@ public class Calculate {
 		return answer;
 	}
 // PART 2
-	public static boolean isDivisbleBy(int a, int b) { // a call to isDivisibleBy determines whether or not one integer is divisible by another, accepts two integers and returns a boolean
+	public static boolean isDivisibleBy(int a, int b) { // a call to isDivisibleBy determines whether or not one integer is divisible by another, accepts two integers and returns a boolean
 		boolean answer = true;
 		answer = (a%b) == 0;
 		return answer;
@@ -128,13 +128,21 @@ public class Calculate {
 		}
 		return n;
 	}
-	public static isPrime(int a) { // a call to isPrime determines whether or not the number passed is prime, accepts an integer and returns a boolean
+	public static boolean isPrime(int a) { // a call to isPrime determines whether or not the number passed is prime, accepts an integer and returns a boolean
 		int i = 2;
-		if(Calculate.isDivisbleBy(a,i)==false) {
+		if(Calculate.isDivisibleBy(a,i)==false) {
 			i++;	
+			return true;
 		} else {
 			return false;
 		}
+	}
+	public static int gfc(int a, int b) { // a call to gfc returns the greatest common factor of two integers passed, accepts two integers and returns one integer
+		int i = 2;
+		while(i<Calculate.max(a,b)) {
+			Calculate.isDivisibleBy(a,i)!=Calculate.isDivisibleBy(b,i);
+		}
+
 	}
 }
 
