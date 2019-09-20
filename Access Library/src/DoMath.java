@@ -7,7 +7,7 @@
 public class DoMath {
 
 	public static void main(String[] args) {
-		System.out.println(Calculate.square(3));
+		System.out.println(Calculate.square(294));
 		System.out.println(Calculate.cube(4));
 		System.out.println(Calculate.average(2,3));
 		System.out.println(Calculate.average(4,6,13));
@@ -25,8 +25,12 @@ public class DoMath {
 		System.out.println(Calculate.round2(454.23434));
 		System.out.println(Calculate.exponent(2,6));
 		System.out.println(Calculate.factorial(9));
-		System.out.println(Calculate.isPrime(1123478543));
-		System.out.println(Calculate.gfc(8,16));
+		System.out.println(Calculate.isPrime(13679));
+		System.out.println(Calculate.gcf(234,24642));
+		System.out.println(Calculate.sqrt(564));
+		System.out.println(Calculate.quadForm(1,13,42));
+		System.out.println(Calculate.discriminant(1,13,42));
+		System.out.println(Calculate.sqrt(1));
 	}
 
 }
