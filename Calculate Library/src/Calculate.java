@@ -99,7 +99,7 @@ public class Calculate {
 		}
 		return max;
 	}
-	public static double min(int a, int b) { // a call to min returns the smaller of the two passed, accepts two integers and returns an integer
+	public static int min(int a, int b) { // a call to min returns the smaller of the two passed, accepts two integers and returns an integer
 		if(a<b) { 
 			return a;
 		} else {
