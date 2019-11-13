@@ -13,6 +13,9 @@ public class ProcessingNumbers {
 		int max = input.nextInt();
 		int min = max;
 		int maxEven = max;
+		if(maxEven % 2 == 0) {
+			sumEven = maxEven;
+		}
 		for(int i = 1 ; i < totalNum ; i++) {
 			System.out.println("Please print your next integer");
 			next = input.nextInt();
