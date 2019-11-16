@@ -6,13 +6,18 @@ public class FracCalc {
     public static void main(String[] args) {
         // TODO: Read the input from the user and call produceAnswer with an equation
     	Scanner input = new Scanner(System.in);
-    	System.out.println("Hello, Welcome to FracCalc. Please enter your problem");
-    	String problem = input.nextLine();
-    	System.out.println(produceAnswer(problem));
+    	System.out.print("Hello, Welcome to FracCalc.  ");
+    	String answer = "yes";
+    	while("yes".equalsIgnoreCase(answer)) {
+        	System.out.println("Please enter your problem");
+        	String problem = input.nextLine();
+        	System.out.println(produceAnswer(problem));
+        	System.out.println("Would you like to continue? Type \"Yes\" to continue or \"quit\" to quit");
+        	answer = input.nextLine();
+    	}
+    	System.out.println("Thank you! Until nextime.");
 
     }
-
-    
 
  // Checkpoint 3 
     public static String produceAnswer(String input) { 
@@ -22,6 +27,14 @@ public class FracCalc {
     	// Check number of terms and operators
     	int num_terms = (split_input.length/2) + 1;
     	int num_operators = split_input.length - num_terms;
+    	String[] operators = new String[num_operators];
+    	int op_counter = 1;
+    	for(int i = 0; i < num_operators - 1; i++) {
+    		operators[i] = split_input[op_counter];
+    		op_counter = op_counter + 2;
+    	}
+    	System.out.println(Arrays.toString(operators));
+    	
     	
     	// First Operand
     	int[] term1 = new int[2];
@@ -53,9 +66,7 @@ public class FracCalc {
         		answer[1] = lcm;
         	}
         } 
-        System.out.println(Arrays.toString(answer));
         simplify(answer);
-        System.out.println(Arrays.toString(answer));
         String simp_answer = "";
         if(Math.abs(answer[1]) == 1) {
         	simp_answer = answer[0] * answer[1] + "";
@@ -101,12 +112,9 @@ public class FracCalc {
     }
     
     public static int lcm(int num1, int num2) {
-		int max = 0;
-		int min = 0;
+		int max = Math.abs(num2);
+		int min = Math.abs(num1);
 		if(num1>num2) { 
-			max = Math.abs(num1);
-			min = Math.abs(num2);
-		} else {
 			max = Math.abs(num1);
 			min = Math.abs(num2);
 		}
