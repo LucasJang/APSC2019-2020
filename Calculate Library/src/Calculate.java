@@ -133,12 +133,12 @@ public class Calculate {
 		}
 		return base;
 	}
-	public static int factorial(int number) { // a call to factorial returns the factorial of the value passed, accepts and returns an integer
+	public static int factorial(int fact) { // a call to factorial returns the factorial of the value passed, accepts and returns an integer
 		int answer = 1;
-		if (number < 0) {
+		if (fact < 0) {
 			throw new IllegalArgumentException("Number must be greater than 0"); 
 		}
-		for (int i = 1; i <= number; i++) {
+		for (int i = 1; i <= fact; i++) {
 			answer *= i;
 		}
 		return answer;
@@ -166,28 +166,28 @@ public class Calculate {
 		}		
 	return 1;
 	}
-	public static double sqrt(double number) { // a call to sqrt find the square root of the variable passed rounded to the nearest two decimal places, accepts and returns a double
-		if(number<0) {
+	public static double sqrt(double base) { // a call to sqrt find the square root of the variable passed rounded to the nearest two decimal places, accepts and returns a double
+		if(base<0) {
 			throw new IllegalArgumentException("Number must be greater than 0");
 		}
-		double guess = number/2;
-		if (number>=0) {
-			while(guess * guess - number >= 0.005 || guess * guess - number <= -0.005) {
-				guess = .5 * (number/guess + guess);
+		double guess = base/2;
+		if (base>=0) {
+			while(guess * guess - base >= 0.005 || guess * guess - base <= -0.005) {
+				guess = .5 * (base/guess + guess);
 			}
 		}
 		return round2(guess);
 	}
 	public static String quadForm(int a, int b, int c) { // a call of quadForm finds the roots of the three coefficients of the quadratic equation in standard form passed, accepts three integers and returns a String
-		double answerplus = round2((-b + sqrt(discriminant(a,b,c)))/(2*a));
-		double answerminus = round2((-b - sqrt(discriminant(a,b,c)))/(2*a));
+		double root1 = round2((-b + sqrt(discriminant(a,b,c)))/(2*a));
+		double root2 = round2((-b - sqrt(discriminant(a,b,c)))/(2*a));
 		String finalanswer = "no real roots";
 		if(discriminant(a,b,c)<0) {
 			finalanswer = "no real roots";
-		} else if (answerminus == answerplus) {
-			finalanswer = answerminus + "";
-		} else if (answerminus != answerplus) {
-			finalanswer = (answerplus + " and " + answerminus);
+		} else if (root2 == root1) {
+			finalanswer = root2 + "";
+		} else if (root2 != root1) {
+			finalanswer = (root1 + " and " + root2);
 		}
 		return finalanswer;
 	}
