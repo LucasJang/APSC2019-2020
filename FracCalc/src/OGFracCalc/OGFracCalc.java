@@ -1,12 +1,12 @@
-package fracCalc;
+package OGFracCalc;
 import java.util.*;
 
-public class FracCalc {
+public class OGFracCalc {
 
     public static void main(String[] args) {
         // TODO: Read the input from the user and call produceAnswer with an equation
     	Scanner input = new Scanner(System.in);
-    	System.out.print("Hello, Welcome to FracCalc.  ");
+    	System.out.print("Hello, Welcome to OGFracCalc.  ");
     	String answer = "yes";
     	while("yes".equalsIgnoreCase(answer)) {
         	System.out.println("Please enter your problem");
@@ -139,7 +139,7 @@ public class FracCalc {
 	    	return superterm;
     	}
     
-	    // Finds least common denominator
+	    // Finds least common multiple
 	    public static int lcm(int num1, int num2) {
 			int max = Math.abs(num2);
 			int min = Math.abs(num1);
